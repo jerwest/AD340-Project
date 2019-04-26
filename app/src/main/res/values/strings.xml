@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AD340 Project</string>
+    <string name="button_one">Zombie Movies</string>
+    <string name="button_two">Button #2</string>
+    <string name="button_three">Button #3</string>
+    <string name="button_four">Button #4</string>
+</resources>
