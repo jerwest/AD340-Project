@@ -1,4 +1,4 @@
-package com.westfall.ad340project;
+package com.westfall.ad340_project;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.westfall.ad340project", appContext.getPackageName());
+        assertEquals("com.westfall.ad340_project", appContext.getPackageName());
     }
 }
