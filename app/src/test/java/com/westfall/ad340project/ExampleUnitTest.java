@@ -1,4 +1,4 @@
-package com.westfall.ad340_project;
+package com.westfall.ad340project;
 
 import org.junit.Test;
 
