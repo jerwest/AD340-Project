@@ -4,4 +4,10 @@
     <string name="b_a_s_application_development">B.A.S. Application Development</string>
     <string name="june_2020">June 2020</string>
     <string name="north_seattle_college">North Seattle College</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="button_1">Button #1</string>
+    <string name="button_2">Button #2</string>
+    <string name="button_3">Button #3</string>
+    <string name="button_4">Button #4</string>
 </resources>
