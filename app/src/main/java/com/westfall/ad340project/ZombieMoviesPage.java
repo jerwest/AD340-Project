@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 public class ZombieMoviesPage extends AppCompatActivity {
+
+    private static final String TAG = "ZombieMoviesPage";
 
     ListView zombieMovieList;
 
@@ -48,6 +51,7 @@ public class ZombieMoviesPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_zombie_movies_page);
 
         zombieMovieList = findViewById(R.id.zombieMovieList1);
@@ -58,7 +62,7 @@ public class ZombieMoviesPage extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ZombieMoviesPage.this, ZombieMovieDetails.class);
-
+                Log.d(TAG, "onItemClick(Bundle) called");
                 intent.putExtra("zombieImageURL", movies[position][3]);
                 intent.putExtra("zombieMovieTitle", movies[position][0]);
                 intent.putExtra("zombieMovieYear", movies[position][1]);
