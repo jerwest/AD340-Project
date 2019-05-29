@@ -19,31 +19,31 @@ public class ZombieMovieDetails extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         //pulling elements values from key on Bundle
-        String ImageUrlReceived = bundle.getString("ImageURL");
-        String TitleReceived = bundle.getString("Title");
-        String YearReceived = bundle.getString("Year");
-        String DirectReceived = bundle.getString("Director");
-        String DescReceived = bundle .getString("Description");
+        String ImageUrlReceived = bundle.getString("zombieImageURL");
+        String TitleReceived = bundle.getString("zombieMovieTitle");
+        String YearReceived = bundle.getString("zombieMovieYear");
+        String DirectReceived = bundle.getString("zombieMovieDirector");
+        String DescReceived = bundle .getString("zombieMovieDescription");
 
         //creating layout elements
-        ImageView image = (ImageView) findViewById(R.id.zombieMovieImage);
-        TextView title = (TextView)findViewById(R.id.zombieMovieTitle);
-        TextView year = (TextView)findViewById(R.id.zombieMovieYear);
-        TextView director = (TextView)findViewById(R.id.zombieMovieDirector);
-        TextView description = (TextView)findViewById(R.id.zombieMovieDescription);
+        ImageView zombieMovieImage = (ImageView) findViewById(R.id.zombieMovieImage);
+        TextView zombieMovieTitle = (TextView)findViewById(R.id.zombieMovieTitle);
+        TextView zombieMovieYear = (TextView)findViewById(R.id.zombieMovieYear);
+        TextView zombieMovieDirector = (TextView)findViewById(R.id.zombieMovieDirector);
+        TextView zombieMovieDescription = (TextView)findViewById(R.id.zombieMovieDescription);
 
         //setting text variables to the fields
-        title.setText(TitleReceived);
-        year.setText(YearReceived);
-        director.setText(DirectReceived);
-        description.setText(DescReceived);
-        //setting image URL
+        zombieMovieTitle.setText(TitleReceived);
+        zombieMovieYear.setText(YearReceived);
+        zombieMovieDirector.setText(DirectReceived);
+        zombieMovieDescription.setText(DescReceived);
 
+        //setting image URL
         Picasso p = Picasso.get();
         p.setIndicatorsEnabled(true);
         p.setLoggingEnabled(true);
 
 
-        p.load(ImageUrlReceived).into(image);
+        p.load(ImageUrlReceived).into(zombieMovieImage);
     }
 }

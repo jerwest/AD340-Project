@@ -59,11 +59,11 @@ public class ZombieMoviesPage extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ZombieMoviesPage.this, ZombieMovieDetails.class);
 
-                intent.putExtra("ImageURL", movies[position][3]);
-                intent.putExtra("Title", movies[position][0]);
-                intent.putExtra("Year", movies[position][1]);
-                intent.putExtra("Director", movies[position][2]);
-                intent.putExtra("Description", movies[position][4]);
+                intent.putExtra("zombieImageURL", movies[position][3]);
+                intent.putExtra("zombieMovieTitle", movies[position][0]);
+                intent.putExtra("zombieMovieYear", movies[position][1]);
+                intent.putExtra("zombieMovieDirector", movies[position][2]);
+                intent.putExtra("zombieMovieDescription", movies[position][4]);
 
                 startActivity(intent);
             }
