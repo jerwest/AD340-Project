@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ZombieMovieDetails">
 
+    <include layout="@layout/content_zombie_movie_details" />
+
 </android.support.constraint.ConstraintLayout>

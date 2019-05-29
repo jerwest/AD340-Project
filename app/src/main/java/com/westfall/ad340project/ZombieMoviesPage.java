@@ -1,11 +1,13 @@
 package com.westfall.ad340project;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -51,6 +53,24 @@ public class ZombieMoviesPage extends AppCompatActivity {
         zombieMovieList = findViewById(R.id.zombieMovieList1);
         ZombieMovieListAdapter adapter = new ZombieMovieListAdapter(this, movies);
         zombieMovieList.setAdapter(adapter);
+
+        zombieMovieList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ZombieMoviesPage.this, ZombieMovieDetails.class);
+
+                intent.putExtra("ImageURL", movies[position][3]);
+                intent.putExtra("Title", movies[position][0]);
+                intent.putExtra("Year", movies[position][1]);
+                intent.putExtra("Director", movies[position][2]);
+                intent.putExtra("Description", movies[position][4]);
+
+                startActivity(intent);
+            }
+        });
+
+
+
     }
 
     public class ZombieMovieListAdapter extends ArrayAdapter<String[]> {
