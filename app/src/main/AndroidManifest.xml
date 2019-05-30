@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.westfall.ad340project">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,9 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ZombieMovieDetails"></activity>
-        <activity android:name=".ZombieMoviesPage"
-            android:label="Zombie Movies"/>
+
+        <activity
+            android:name=".AboutActivity"
+            android:label="About"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ZombieMoviesPage"
+            android:label="Zombie Movies"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ZombieMovieDetails"
+            android:label="Zombie Movie Details"
+            android:parentActivityName=".ZombieMoviesPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ZombieMoviesPage"/>
+        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

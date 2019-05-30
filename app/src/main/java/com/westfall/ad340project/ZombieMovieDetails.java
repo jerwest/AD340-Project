@@ -1,8 +1,10 @@
 package com.westfall.ad340project;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +20,12 @@ public class ZombieMovieDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_zombie_movie_details);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        ((ActionBar) ab).setDisplayHomeAsUpEnabled(true);
+
 
         Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();

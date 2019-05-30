@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".ZombieMoviesPage">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <include layout="@layout/content_zombie_movie_list" />
 
 </android.support.constraint.ConstraintLayout>

@@ -3,7 +3,9 @@ package com.westfall.ad340project;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +55,12 @@ public class ZombieMoviesPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_zombie_movies_page);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        ((ActionBar) ab).setDisplayHomeAsUpEnabled(true);
+
 
         zombieMovieList = findViewById(R.id.zombieMovieList1);
         ZombieMovieListAdapter adapter = new ZombieMovieListAdapter(this, movies);
