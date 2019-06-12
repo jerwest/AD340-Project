@@ -4,12 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ZombieMoviesPage">
+    tools:context=".ZombieMoviesPage"
+    android:orientation="vertical">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-    <include layout="@layout/content_zombie_movie_list" />
+    <ListView
+        android:id="@+id/zombieMovieList1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="5dp">
+
+
+    </ListView>
 
 </android.support.constraint.ConstraintLayout>
