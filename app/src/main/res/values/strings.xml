@@ -4,7 +4,9 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="button_1_of_4">Zombie Movies</string>
-    <string name="button_2_of_4">Button #2</string>
+    <string name="button_2_of_4">Traffic Cameras</string>
     <string name="button_3_of_4">Button #3</string>
     <string name="button_4_of_4">Button #4</string>
+    <string name="no_connection">NO CONNECTION</string>
+
 </resources>

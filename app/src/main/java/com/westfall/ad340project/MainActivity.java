@@ -22,52 +22,57 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-    Button btn1 = (Button)findViewById(R.id.button);
-    btn1.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(MainActivity.this, "Send", Toast.LENGTH_SHORT).show();
+        Button btn1 = (Button)findViewById(R.id.button);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Send", Toast.LENGTH_SHORT).show();
 
-        }
-    });
+            }
+        });
 
-    Button btn2 = (Button)findViewById(R.id.button2);
-    btn2.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(MainActivity.this, "Zombie Movies", Toast.LENGTH_SHORT).show();
-            openZombieMoviesPage();
+        Button btn2 = (Button)findViewById(R.id.button2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Zombie Movies", Toast.LENGTH_SHORT).show();
+                openZombieMoviesPage();
+            }
+        });
 
-        }
-    });
+        Button btn3 = (Button)findViewById(R.id.button3);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Traffic Cameras", Toast.LENGTH_SHORT).show();
+                openTrafficCamerasPage();
+            }
+        });
 
-    Button btn3 = (Button)findViewById(R.id.button3);
-    btn3.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(MainActivity.this, "Button #2", Toast.LENGTH_SHORT).show();
-        }
-    });
+        Button btn4 = (Button)findViewById(R.id.button4);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Button #3", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-    Button btn4 = (Button)findViewById(R.id.button4);
-    btn4.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(MainActivity.this, "Button #3", Toast.LENGTH_SHORT).show();
-        }
-    });
-
-    Button btn5 = (Button)findViewById(R.id.button5);
-    btn5.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(MainActivity.this, "Button #4", Toast.LENGTH_SHORT).show();
-        }
-    });
-}
+        Button btn5 = (Button)findViewById(R.id.button5);
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Button #4", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     public void openZombieMoviesPage() {
         Intent intent = new Intent(this, ZombieMoviesPage.class);
+        startActivity(intent);
+    }
+
+    public void openTrafficCamerasPage() {
+        Intent intent = new Intent(this, TrafficCamerasPage.class);
         startActivity(intent);
     }
 
