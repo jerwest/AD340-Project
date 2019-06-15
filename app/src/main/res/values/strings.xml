@@ -8,5 +8,6 @@
     <string name="button_3_of_4">Traffic Cam Map</string>
     <string name="button_4_of_4">Button #4</string>
     <string name="no_connection">NO CONNECTION</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

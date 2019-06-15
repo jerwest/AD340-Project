@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Traffic Cam Map", Toast.LENGTH_SHORT).show();
-                openTrafficCamMap();
+                openMapsActivity();
 
             }
         });
@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openTrafficCamMap() {
-        Intent intent = new Intent(this, TrafficCamMap.class);
+    public void openMapsActivity() {
+        Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
 
