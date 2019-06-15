@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Button #3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Traffic Cam Map", Toast.LENGTH_SHORT).show();
+                openTrafficCamMap();
+
             }
         });
 
@@ -73,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openTrafficCamerasPage() {
         Intent intent = new Intent(this, TrafficCamerasPage.class);
+        startActivity(intent);
+    }
+
+    public void openTrafficCamMap() {
+        Intent intent = new Intent(this, TrafficCamMap.class);
         startActivity(intent);
     }
 

@@ -62,13 +62,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TrafficCamerasPage" />
         </activity>
-        <activity android:name=".NoInternetConnection"
+        <activity
+            android:name=".NoInternetConnection"
             android:label="No Internet Connection"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".TrafficCamMap"
+            android:label="Traffic Cam Map"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>
